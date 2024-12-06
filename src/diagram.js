@@ -1229,7 +1229,7 @@ dc_graph.diagram = function (parent, chartGroup) {
         if(!object)
             return false; // null is always a valid mode for any renderer
         if(!object.supportsRenderer)
-            console.log('could not check if "' + id + '" is compatible with ' + rtype);
+            onetime_trace('trace', 'could not check if "' + id + '" is compatible with ' + rtype);
         else if(!object.supportsRenderer(rtype))
             return 'not installing "' + id + '" because it is not compatible with renderer ' + rtype;
         return false;

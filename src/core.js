@@ -142,9 +142,10 @@ function onetime_trace(level, message) {
         if(said)
             return;
         if(level === 'trace') {
-            console.groupCollapsed(message);
-            console.trace();
-            console.groupEnd();
+            // todo: implement levels?
+            // console.groupCollapsed(message);
+            // console.trace();
+            // console.groupEnd();
         }
         else
             console[level](message);
